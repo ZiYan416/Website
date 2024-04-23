@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 页面移动设备适配 -->
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+		<title>日历-驻星</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+			* {
+				font-family: 'Poppins', sans-serif;
+			}
+
+			.text {
+				text-align: center;
+				margin: 40px 0;
+			}
+
+			.text h2 {
+				font-size: 36px;
+			}
+
+			.text h3 {
+				font-size: 30px;
+			}
+
+			.content {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.calendar {
+				width: 70%;
+				height: 80%;
+				font-family: Arial, sans-serif;
+				border-radius: 20px;
+				background: rgba(69, 69, 69, 0.3);
+				backdrop-filter: blur(4px);
+				box-shadow: inset 1px 1px 6px rgba(255, 255, 255, 0.3),
+					2px 2px 15px rgba(0, 0, 0, 0.5);
+			}
+
+			.calendar table {
+				width: 100%;
+				height: 100%;
+				table-layout: fixed;
+			}
+
+			.calendar th,
+			.calendar td {
+				padding: 5px;
+				font-size: 24px;
+				border-radius: 18px;
+				text-align: center;
+				transition: all 0.4s ease 0s;
+			}
+
+			.calendar th {
+				background-color: #999;
+			}
+
+			.calendar td:hover {
+				background-color: #eee;
+				color: #999;
+				box-shadow:  6px 6px 10px #999;
+				cursor: pointer;
+				text-shadow: 0px 0px 10px #999;
+				transition: all 0.4s ease 0s;
+			}
+
+			.calendar .current-day {
+				background-color: #b3d4fc;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<a href="home.html" class="logo">驻星<i id="planet" class="bx bx-planet"></i></a>
+			<nav class="navbar"> <!-- 导航栏 -->
+				<a href="home.html" class="item">首页</a>
+				<a href="baike.html" class="item">百科</a>
+				<a href="SolarSystem.html" class="item">太阳系</a>
+				<a href="calendar.html" class="active item">日历</a>
+				<a href="index.html" class="item">退出登录<i class='bx bx-log-out'></i></a>
+			</nav>
+		</header>
+		<div class="contentWrapper">
+			<div class="content">
+				<div class="text">
+					<h2>欢迎使用驻星的日历功能</h2>
+					<p>查看日期，祝您更好的观察天空</p>
+					<h3>现在是2023年12月</h3>
+				</div>
+				<div id="calendar" class="calendar"></div>
+			</div>
+		</div>
+		<div class="footer">
+			Copyright 2023-2024© 808---驻星 All Rights Reserved
+		</div>
+
+		<script>
+			// 获取日历容器
+			var calendarContainer = document.getElementById('calendar');
+
+			// 获取当前日期和月份
+			var currentDate = new Date();
+			var currentYear = currentDate.getFullYear();
+			var currentMonth = currentDate.getMonth();
+
+			// 生成日历
+			function generateCalendar() {
+				// 获取当前月份的第一天
+				var firstDay = new Date(currentYear, currentMonth, 1);
+				// 获取当前月份的天数
+				var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+				// 创建日历表格
+				var calendarTable = document.createElement('table');
+
+				// 创建表头
+				var headerRow = document.createElement('tr');
+				var weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+				for (var i = 0; i < weekdays.length; i++) {
+					var th = document.createElement('th');
+					th.textContent = weekdays[i];
+					headerRow.appendChild(th);
+				}
+				calendarTable.appendChild(headerRow);
+
+				// 填充日期
+				var date = 1;
+				for (var i = 0; i < 6; i++) {
+					var row = document.createElement('tr');
+					for (var j = 0; j < 7; j++) {
+						var cell = document.createElement('td');
+						if (i === 0 && j < firstDay.getDay()) {
+							// 填充空白单元格
+							cell.textContent = '';
+						} else if (date > daysInMonth) {
+							// 填充超过本月天数的空白单元格
+							break;
+						} else {
+							// 填充日期
+							cell.textContent = date;
+							if (
+								date === currentDate.getDate() &&
+								currentMonth === currentDate.getMonth() &&
+								currentYear === currentDate.getFullYear()
+							) {
+								// 添加当前日期的样式
+								cell.classList.add('current-day');
+							}
+							date++;
+						}
+						row.appendChild(cell);
+					}
+					calendarTable.appendChild(row);
+				}
+				
+
+				// 清空日历容器并添加日历表格
+				calendarContainer.innerHTML = '';
+				calendarContainer.appendChild(calendarTable);
+			}
+
+			// 生成初始日历
+			generateCalendar();
+		</script>
+	</body>
+</html>

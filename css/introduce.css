@@ -1,0 +1,48 @@
+body {
+	overflow-x: hidden;
+	background: url(../img/bg1.jpg);
+	background-size: cover;
+}
+
+.contentWrapper {
+	background: transparent;
+	margin-top: 102px;
+	padding: 0 6%;
+}
+
+.contentWrapper .content {
+	height: 100%;
+	border: 1px solid #e4e4e4;
+	border-radius: 20px;
+	display: flex;
+	margin-top: 2px;
+	color: #fff;
+	background: rgba(69, 69, 69, 0.5);
+	backdrop-filter: blur(4px);
+	box-shadow: inset 1px 1px 6px rgba(255, 255, 255, 0.3),
+		2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.content .introduce {
+	width: 100%;
+	margin: 60px 200px;
+}
+
+.introduce  h1{
+	font-size: 42px;
+}
+
+.introduce img{
+	width: 800px;
+}
+
+.introduce #annotate{
+	color: #a0a0a0;
+}

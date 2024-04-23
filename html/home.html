@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 页面移动设备适配 -->
+		<link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/home.css">
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+		<title>首页-驻星</title>
+	</head>
+	<body>
+		<header class="header">
+			<a href="home.html" class="logo">驻星<i id="planet" class="bx bx-planet"></i></a>
+			<nav class="navbar"> <!-- 导航栏 -->
+				<a href="home.html" class="active item">首页</a>
+				<a href="baike.html" class="item">百科</a>
+				<a href="SolarSystem.html" class="item">太阳系</a>
+				<a href="calendar.html" class="item">日历</a>
+				<a href="index.html" class="item">退出登录<i class='bx bx-log-out'></i></a>
+			</nav>
+		</header>
+		<div id="contentWrapper">
+			<div class="row content">
+				<div class="row-1">
+					<div class="col-1">
+						<div class="dynamic">
+							<h2 class="md-title"><a href="dynamic.html"><i class='bx bx-detail'></i></a>新闻动态<span>/Dynamic</span>
+							</h2>
+							<dl class="d-list">
+								<dt>
+									<a href="dynamic.html"><img src="../img/eye.jpg" /></a>
+								</dt>
+								<dd>
+									<h4>中国天眼发现脉冲星辐射新形态矮脉冲族群</h4>
+									<p>国际科学期刊《自然·天文》发表了中国科学院国家天文台韩金林研究员领导的王绶琯巡天突击队的新成果
+									，揭示了脉冲星辐射濒临熄灭时，其磁层结构基本不变的物理事实。</p>
+								</dd>
+							</dl>
+							<ul class="u-list">
+								<li><i class='bx bxs-hot'></i><span>2022-11-11 </span><a href="https://www.guancha.cn/GouLiJun/2022_11_11_666215.shtml">科学的获取90%依赖设备，中国进入加速追赶期</a></li>
+								<li><i class='bx bxs-hot'></i><span>2023-06-27 </span><a href="https://www.guancha.cn/industry-science/2023_06_27_698365.shtml">海拔4526米，全国首座“零海拔天文观测站”交付</a></li>
+								<li><i class='bx bxs-hot'></i><span>2021-07-07 </span><a href="https://www.guancha.cn/politics/2021_07_07_597299.shtml">霍金黑洞面积定理首次获观测证实</a></li>
+								<li><i class='bx bxs-hot'></i><span>2019-04-11 </span><a href="https://www.guancha.cn/FanPu/2019_04_11_497206.shtml">首张黑洞照片参与者：我们在盯着这些东西</a></li>
+								<li><i class='bx bxs-hot'></i><span>2021-05-20 </span><a href="https://www.guancha.cn/industry-science/2021_05_20_591371.shtml">“中国天眼”新发现201颗脉冲星</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-2">
+						<div class="news">
+							<h2 class="md-title"><a href="news.html"><i class='bx bx-detail'></i></a>新闻资讯<span>/News</span></h2>
+							<section class="newswrapper">
+								<a><i class='bx bx-left-arrow-alt button' id="prev"></i></a>
+								<div class="imagecontainer">
+									<div class="carousel">
+										<img src="../img/new1.png" class="img" />
+										<div class="imgdetails" id="new1">
+											<a href="news.html" id="standfirst">美国宇航局和塞拉航天公司正在该公司的“追梦者”号航天器首次飞往国际空间站的飞行中取得进展。
+												这架无人货运航天飞机计划于2024年向轨道综合体发射演示任务，作为美国宇航局商业补给服务的一部分。</a><br />
+											<a id="article">Sierra Space的Dream Chaser新站为NASA提供补给航天器</a>
+										</div>
+										<img src="../img/new2.png" class="img" />
+										<div class="imgdetails" id="new2">
+											<a id="standfirst">美国宇航局格伦研究中心（NASA Glenn Research
+												Center）的高度风洞建于1940年代初，是美国唯一能够在真实飞行条件下研究全尺寸飞机发动机的风洞。</a><br />
+											<a id="article">空调发明者帮助冷却美国宇航局的风洞</a>
+										</div>
+									</div>
+								</div>
+								<a><i class='bx bx-right-arrow-alt button' id="next"></i></a>
+							</section>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="weather">
+							<h2 class="md-title">天气查询<span>/Weather</span></h2>
+							<div class="title">
+								<input id="city" placeholder="请输入查询地址名称" style="width: 200px;" />
+								<button type="submit" onclick="getWeather()"><i class='bx bx-search'></i></button><br />
+							</div>
+							<div class="bg">
+								<div class="box" id="box">
+									<h3>实时天气信息</h3>
+									<ul>
+										<li><a id="tem"></a></li>
+										<li><a id="weather"></a></li>
+										<li><a id="wea"></a></li>
+										<li><a id="localcity"></a></li>
+										<li><a id="date"></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-2">
+					<div class="col-4">
+						<div class="product">
+							<h2 class="md-title">夜空中国<span>/NightChina</span>
+							</h2>
+							<div class="gallery">
+								<div class="image-container">
+									<a href=""><img src="../img/1.png"></a>
+									<div class="image-details"><a id="date">2023年12月15日</a><br />
+										<a id="title">一剑下天山</a>
+									</div>
+								</div>
+								<div class="image-container">
+									<a href=""><img src="../img/2.png"></a>
+									<div class="image-details"><a id="date">2023年12月14日</a><br />
+										<a id="title">三角座星系</a>
+									</div>
+								</div>
+								<div class="image-container">
+									<a href=""><img src="../img/3.png"></a>
+									<div class="image-details"><a id="date">2023年12月13日</a><br />
+										<a id="title">冰川与猎户</a>
+									</div>
+								</div>
+							</div>
+							<div class="saying"><p style="font-family: NSimSun;">黑夜给了我黑色的眼睛 我却用它寻找光明</p>	</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="introduce">
+							<h2 class="md-title">天文大家<span>/Introduce</span></h2>
+							<p>
+								<span>南仁东</span>，男，满族，吉林辽源人，中国天文学家、中国科学院国家天文台研究员，人民科学家。
+								曾任FAST工程首席科学家兼总工程师，主要研究领域为射电天体物理和射电天文技术与方法，负责国家重大科技基础设施500米口径球面射电望远镜(FAST)的科学技术工作。
+								2017年5月，获得全国创新争先奖； 2017年7月，入选为2017年中国科学院院士增选初步候选人。 <a href="introduce.html">【详情】</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			Copyright 2023-2024© 808---驻星 All Rights Reserved
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../js/home.js"></script>
+	</body>
+</html>

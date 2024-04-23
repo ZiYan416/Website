@@ -1,0 +1,222 @@
+.content .textshow {
+	width: 100%;
+	text-align: center;
+	height: auto;
+	margin: 60px 0;
+}
+
+.content h2 {
+	color: #FFFFFF;
+
+	font-weight: bold;
+	font-size: 38px;
+}
+
+.content h3 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#bigbox {
+	width: 70%;
+	height: auto;
+	margin: 0 18%;
+	position: absolute;
+	top: 200px;
+	padding-bottom: 50px;
+}
+
+#box {
+	float: left;
+	display: block;
+	width: 20%;
+	margin-right: 2%;
+	margin-left: 2%;
+	padding: 4px;
+	margin-bottom: 70px;
+	line-height: 1.42857143;
+	border: 1px solid #FFFFFF;
+	border-radius: 4px;
+	height: 230px;
+	transition: all 0.4s ease 0s;
+}
+
+#box img {
+	max-width: 100%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: -1;
+}
+
+#box h4 {
+	margin: 5px auto;
+	color: #FFFFFF;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#box h4 a {
+	text-decoration: none;
+}
+
+#box h4 a:link {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#box h4 a:hover {
+	text-decoration: none;
+
+	color: #BBBBBB;
+}
+
+#box h4 a:visited {
+	COLOR: #FFFFFF;
+}
+
+#box h5 {
+	margin: -8px auto;
+	font-size: 18px;
+	color: #BBBBBB;
+}
+
+#box a {
+	text-decoration: none;
+}
+
+#box a:hover {
+	text-decoration: none;
+}
+
+#box p {
+	margin: 16px 16px 16px 16px;
+	font: 15px;
+	color: #BBBBBB;
+}
+
+#box:hover {
+	box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.9),
+		4px 4px 25px rgba(0, 0, 0, 0.9);
+	transition: all 0.4s ease 0s;
+}
+
+#sscontent {
+	position: relative;
+	top: 0px;
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
+#sstitle {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#sstitle h1 {
+	margin-top: 40px;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000;
+	font-weight: bold;
+	font-size: 48px;
+}
+
+#sstitle h2 {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px #000;
+	font-size: 24px;
+}
+
+#sstitle p {
+	padding-top: 30px;
+	width: 40%;
+	text-shadow: 1px 1px 2px #000;
+	height: auto;
+	color: #FFFFFF;
+	font-size: 15px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#sstitle p.one:first-letter {
+	float: left;
+	font-size: 44px;
+}
+
+#ssbigbox {
+	width: 100%;
+	margin: 10px auto;
+	position: relative;
+	top: 0px;
+	padding-bottom: 0px;
+	/*等于footer的高度*/
+	margin-bottom: 0px;
+}
+
+#ssbox {
+	position: relative;
+	width: auto;
+	height: auto;
+	padding-top: 100px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#ssbox h3 {
+	float: left;
+	margin: -10px 100px 20px 0;
+	font-size: 19px;
+	color: #BBBBBB;
+}
+
+#ssbox p1 {
+	width: 47%;
+	float: left;
+	font-size: 15px;
+	text-indent: 2em;
+	color: #FFFFFF;
+	text-align: left;
+	margin: 0px 0 25px 20px;
+}
+
+#ssbox p {
+	width: 95%;
+	float: left;
+	font-size: 15px;
+	text-indent: 2em;
+	color: #FFFFFF;
+	text-align: left;
+	margin: 0px 0 25px 20px;
+}
+
+#ssbox img {
+	width: 45%;
+	height: auto;
+	margin: 0 0 0 10px;
+}
+
+#tianti {
+	width: 100%;
+	float: left;
+	margin: 0px auto 0 10px;
+}
+
+#tianti h4 {
+	text-align: left;
+	margin: 0 0 0 10px;
+	font-size: 16px;
+	color: #BBBBBB;
+}
+
+#tianti ol {}
+
+#tianti ol li {
+	color: #FFFFFF;
+	margin: 5px;
+	text-align: left;
+}
