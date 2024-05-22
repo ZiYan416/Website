@@ -24,7 +24,7 @@ document.getElementById("submit").addEventListener("click", function(event) {
 			});
 			if (account) {
 				alert("登录成功");
-				window.location.href = "home.html";
+				window.location.href = "html/home.html";
 			} else {
 				alert("用户名或密码错误");
 			}
