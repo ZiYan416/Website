@@ -1,7 +1,9 @@
 var accounts = [
   {
     username: "808",
-    password: "123456"
+    password: "123456",
+	username: "xiaolingling",
+	password: "1030520",
   }
 ];
 document.getElementById("submit").addEventListener("click", function(event) {
